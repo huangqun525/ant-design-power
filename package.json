@@ -1,0 +1,70 @@
+{
+  "name": "ant-design-power",
+  "version": "1.4.2",
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "release": "npm run build && npm publish",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "lib/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/huangqun525/ant-design-power/issues"
+  },
+  "title": "ant-design-power",
+  "keywords": [
+    "ant-design",
+    "antd",
+    "component",
+    "react",
+    "react-component"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "homepage": "https://huangqun525.github.io/ant-design-power/docs-dist/#/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangqun525/ant-design-power"
+  },
+  "peerDependencies": {
+    "antd": "^4.0.0",
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "dependencies": {
+    "react-infinite-scroll-component": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@umijs/plugin-locale": "^0.14.2",
+    "@umijs/test": "^3.0.5",
+    "antd": "^4.16.13",
+    "babel-plugin-import": "^1.13.3",
+    "dumi": "^1.0.16",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "moment": "^2.29.1",
+    "prettier": "^2.2.1",
+    "react": "^18.2.0",
+    "yorkie": "^2.0.0"
+  }
+}
